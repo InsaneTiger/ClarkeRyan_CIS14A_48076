@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Truth Table</title>
+</head>
+
+<body>
+<table width="200" border="1">
+ <tr>
+  <td>X</td>
+  <td>Y</td>
+  <td>!X</td>
+  <td>!Y</td>
+  <td>X&&Y</td>
+  <td>X||Y</td>
+  <td>X^Y</td>
+  <td>X^Y^Y</td>
+  <td>X^Y^X</td>
+  <td>!(X&&Y)</td>
+  <td>!X||!Y</td>
+  <td>!(X||Y)</td>
+  <td>!X&&!Y</td>
+ </tr>
+<script type="text/javascript">
+	//First Row of the Table
+	var X=true;
+	var Y=true;
+	document.write("<tr>");
+		document.write("<td>"+(X?'T':'F')+"</td>");
+		document.write("<td>"+(Y?'T':'F')+"</td>");
+		document.write("<td>"+(!X?'T':'F')+"</td>");
+		document.write("<td>"+(!Y?'T':'F')+"</td>");
+		document.write("<td>"+(X&&Y?'T':'F')+"</td>");
+		document.write("<td>"+(X||Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^X?'T':'F')+"</td>");
+		document.write("<td>"+(!(X&&Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X||!Y?'T':'F')+"</td>");
+		document.write("<td>"+(!(X||Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X&&!Y?'T':'F')+"</td>");
+	document.write("</tr>");
+	//Second Row of the Table
+	X=true;
+	Y=false;
+document.write("<tr>");
+		document.write("<td>"+(X?'T':'F')+"</td>");
+		document.write("<td>"+(Y?'T':'F')+"</td>");
+		document.write("<td>"+(!X?'T':'F')+"</td>");
+		document.write("<td>"+(!Y?'T':'F')+"</td>");
+		document.write("<td>"+(X&&Y?'T':'F')+"</td>");
+		document.write("<td>"+(X||Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^X?'T':'F')+"</td>");
+		document.write("<td>"+(!(X&&Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X||!Y?'T':'F')+"</td>");
+		document.write("<td>"+(!(X||Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X&&!Y?'T':'F')+"</td>");
+	document.write("</tr>");
+	//Third Row of the Table
+	X=false;
+	Y=true;
+document.write("<tr>");
+		document.write("<td>"+(X?'T':'F')+"</td>");
+		document.write("<td>"+(Y?'T':'F')+"</td>");
+		document.write("<td>"+(!X?'T':'F')+"</td>");
+		document.write("<td>"+(!Y?'T':'F')+"</td>");
+		document.write("<td>"+(X&&Y?'T':'F')+"</td>");
+		document.write("<td>"+(X||Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^X?'T':'F')+"</td>");
+		document.write("<td>"+(!(X&&Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X||!Y?'T':'F')+"</td>");
+		document.write("<td>"+(!(X||Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X&&!Y?'T':'F')+"</td>");
+	document.write("</tr>");
+	//Fourth Row of the Table
+	X=false;
+	Y=false;
+document.write("<tr>");
+		document.write("<td>"+(X?'T':'F')+"</td>");
+		document.write("<td>"+(Y?'T':'F')+"</td>");
+		document.write("<td>"+(!X?'T':'F')+"</td>");
+		document.write("<td>"+(!Y?'T':'F')+"</td>");
+		document.write("<td>"+(X&&Y?'T':'F')+"</td>");
+		document.write("<td>"+(X||Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^Y?'T':'F')+"</td>");
+		document.write("<td>"+(X^Y^X?'T':'F')+"</td>");
+		document.write("<td>"+(!(X&&Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X||!Y?'T':'F')+"</td>");
+		document.write("<td>"+(!(X||Y)?'T':'F')+"</td>");
+		document.write("<td>"+(!X&&!Y?'T':'F')+"</td>");
+	document.write("</tr>");
+	
+</script>
+</table>
+</body>
+</html>
+		
+  
