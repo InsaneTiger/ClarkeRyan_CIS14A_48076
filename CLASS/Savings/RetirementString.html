@@ -1,0 +1,52 @@
+<script type="text/javascript">
+/*
+   Ryan Clarke
+   09/15-14
+   Loop Construct - For
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Retirement Account</title>
+</head>
+
+<body>
+<h1>Retirement Table</h1>
+<script type="text/javascript">
+//Setup the savings table
+   var balance = 100; //unit = $
+   var intRate = 5; // unit = percentage rate
+   var deposit = 500; //unit = $
+   var str = "";
+   //Output initial conditions
+   str+=("<p>Initial Balance = $"+balance+"</p>");
+   str+=("<p>Interest Rate = "+intRate+"%</p>");
+   str+=("<p>Yearly Deposit = $"+deposit+"</p>");
+</script>
+<table width="200" border="1">
+  <tbody>
+    <tr>
+      <td>Year</td>
+      <td>Savings $</td>
+    </tr>
+  </tbody>
+<script type="text/javascript">
+   //Generate a table
+   for (var year=1; year<=50; year++)
+   {   str+=("<tr>");
+	   str+=("<td>"+year+"</td>");
+	   //Calculate Balance
+	   balance*=(1+intRate/100);
+	   balance+=deposit;
+	   balance=balance.toFixed(2);
+	   str+=("<td>"+balance+"</td>");
+	   str+=("</tr>");
+	   
+   } 
+   document.write(str); 
+</script>
+</table>
+</body>
+</html>
