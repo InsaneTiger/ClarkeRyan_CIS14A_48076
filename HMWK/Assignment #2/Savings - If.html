@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	/*
+		Ryan Clarke
+		09/13/14
+		Paycheck with If Statements
+	*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Paycheck - If </title>
+</head>
+
+<body>
+<script type="text/javascript">
+	//Declare and initialize variables
+	var hours=parseInt(Math.random()*59+1)//Hours worked in (hrs) between 0 and 60
+	var payRate=10;//($'s/hr)
+	var ovt=20;//Hour at which over time starts
+	var tri=40;//Hour at which triple time starts
+	var payChk;//Declaration of Pay Check in Dollars
+	//Output the inputs
+	document.write("<h1>Hours worked      =  "+hours  +" (hrs)</h1>");
+	document.write("<h1>Pay Rate          = $"+payRate+"      </h1>");
+	document.write("<h1>Over time start   =  "+ovt    +" (hrs)</h1>");
+	document.write("<h1>Triple time start =  "+tri    +" (hrs)</h1>");
+	//Determine our paycheck
+	if(hours<=ovt)payChk=hours*payRate;
+	if(hours>ovt && hours<=tri)payChk=hours*payRate+((hours-ovt)*payRate);
+	if(hours>tri)payChk=hours*payRate+((hours-ovt)*payRate)+((hours-tri)*payRate);
+	payChk=payChk.toFixed(2);
+	//Output our Pay Check
+	document.write("<h1>Our Pay Check = $"+payChk+"</h1");
+</script>
+</body>
+</html>
+
