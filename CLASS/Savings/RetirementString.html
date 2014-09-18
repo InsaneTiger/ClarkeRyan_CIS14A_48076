@@ -16,20 +16,23 @@
 <h1>Retirement Table</h1>
 <script type="text/javascript">
 //Setup the savings table
-   var balance = 100; //unit = $
-   var intRate = 5; // unit = percentage rate
-   var deposit = 500; //unit = $
+   var balance1 = 0; //unit = $
+   var balance2 = 0; //unit = $
+   var intRate1 = 5; // unit = percentage rate
+   var intRate2 = 6; //unit = percentage rate
+   var deposit = 12000; //unit = $
    var str = "";
    //Output initial conditions
-   str+=("<p>Initial Balance = $"+balance+"</p>");
-   str+=("<p>Interest Rate = "+intRate+"%</p>");
+   str+=("<p>Initial Balance = $"+balance1+"</p>");
+   str+=("<p>Interest Rates = "+intRate1+"% and "+intRate2+"%</p>");
    str+=("<p>Yearly Deposit = $"+deposit+"</p>");
 </script>
 <table width="200" border="1">
   <tbody>
     <tr>
       <td>Year</td>
-      <td>Savings $</td>
+      <td>Savings at 5%</td>
+      <td>Savings at 6%</td>
     </tr>
   </tbody>
 <script type="text/javascript">
@@ -38,10 +41,14 @@
    {   str+=("<tr>");
 	   str+=("<td>"+year+"</td>");
 	   //Calculate Balance
-	   balance*=(1+intRate/100);
-	   balance+=deposit;
-	   balance=balance.toFixed(2);
-	   str+=("<td>"+balance+"</td>");
+	   balance1*=(1+intRate1/100);
+	   balance1+=deposit;
+	   balance1=balance1.toFixed(2);
+	   str+=("<td>"+balance1+"</td>");
+	   balance2*=(1+intRate2/100);
+	   balance2+=deposit;
+	   balance2=balance2.toFixed(2);
+	   str+=("<td>"+balance2+"</td>");
 	   str+=("</tr>");
 	   
    } 
