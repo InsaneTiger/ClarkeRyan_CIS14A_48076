@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Example Functions</title>
+<script language="javascript" src="retirement.js">
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+	//Create a table that outputs retierment values. 
+	var balance=0;//Dollars
+	var intRate=5;//Percent interest yearly
+	var mDeposit=100;//Deposit Monthly
+	var str="";
+	str+=("<h1>Balance = $"+balance+"</h1>");
+	str+=("<h1>InterestRate ="+intRate+"%/year</h1>");
+	str+=("<h1>Monthly Deposit = $"+mDeposit+"</h1>");
+	//Output the results 
+	var nYears=50;
+	var retirement=retireArray(balance,intRate,nYears,mDeposit);
+    var heading=[];
+	heading[0]="Year";
+	heading[1]="Savings $";
+	str+=display(heading,retirement);
+	document.write(str);
+</script>
+</body>
+</html>

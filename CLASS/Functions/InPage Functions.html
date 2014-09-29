@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Example Functions</title>
+<script type="text/javascript">
+	//Input
+	// bal->Initial Balance $'s
+	// intR->Interest Rate %/year
+	// nPer->Number of compoundng periods (years)
+	// mDep->Monthly Deposits accrused till end of year
+	//Output
+	// Retirement-> $'s
+
+	function retire(bal,intR,nPer,mDep){
+		var retirement=bal;
+		for(var year=1;year<=nPer;year++){
+			retirement*=(1+intR/100);
+			retirement+=(mDep*12);
+			retirement=retirement.toFixed(2);
+		}
+    	return retirement;
+	}
+</script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+	//Create a table that outputs retierment values. 
+	var balance=0;//Dollars
+	var intRate=5;//Percent interest yearly
+	var mDeposit=100;//Deposit Monthly
+	var str="";
+	str+="<h1>Balance = $"+balance+"</h1>";
+	str+="<h1>InterestRate ="+intRate+"%/year</h1>";
+	str+="<h1>Monthly Deposit = $"+mDeposit+"</h1>";
+	//Output results in a table
+	str+='<table width="200" border="1">';
+    str+="<tr><th>Year</th><th>Retirment</th></tr>";
+
+	var nYears=50;
+	var retirement;
+	for(var year=1; year<=nYears;year++){
+		retirement=retire(balance,intRate,year,mDeposit);
+		str+="<tr>";
+		str+=("<td>"+year+"</td>");
+		str+=("<td>"+retirement+"</td>");
+		str+="</tr>";
+	}
+	str+="</table>";
+	document.write(str);
+</script>
+</body>
+</html>
